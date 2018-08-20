@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  	.one .two .para{color: red}
+  	.one .two #para1{color: red}
+  	.one .two #para2{color: red}
+  	.two .para{color: red}
+  	.two #para1{color: red}
+  	.two #para2{color: red}
+  	.para{color: red}
+  	#one #two #para1{color: red}
+  	#one #two #para2{color: red}
+  	#two #para1{color: red}
+  	#two #para2{color: red}
+  	#para1{color: red}
+  	#para2{color: red}
+  	div div p{color: red}
+  	div p{color: red}
+  	p{color: red}
+  	p:first-child{color: red}
+  	p:last-child{color: red}
+  	p:nth-child(odd){color: red}
+  	p:nth-child(even){color: red}
+  	p:nth-child(1){color: red}
+  	p:nth-child(2){color: red}
+  </style>
+</head>
+<body>
+  <div class="one" id="one">
+    <div class="two" id="two">
+      <p class="para" id="para1">color</p>
+      <p class="para" id="para2"></p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+分别用4个数字（a，b，c，d）表示优先级组合，比如1，1，1，1和0，1，0，1。它们的意思分别是：
+第一个数字（a）表示style属性，优先级最高。由于一般都是class样式，所以该值一般都是0。
+第二个数字（b）是该CSS选择器上的id数量的总和，一般都是1个。
+第三个数字（c）是用在该CSS选择器上的其他属性CSS选择器以及伪类的总和。
+  这里包括class（.btn）和属性CSS选择器（比如li[id=red]）。
+第四个数字（d）计算元素（就像table、p、div等）和伪元素（就像first-child等）。
+
+
+		p[class]{
+			color: red;
+		}
+
+		p:first-child{
+			color: blue;显示蓝色
+		}
+		与
+		p:first-child{
+			color: blue;
+		}
+		p[class]{
+			color: red;显示红色
+		}
+		优先级相同，在样式表中靠后的起作用。
+
+		与伪元素选择器则伪类或属性选择器优先级较高
+		

@@ -1,0 +1,36 @@
+依据内核来划分浏览器。
+
+chrome & safari使用的是webkit内核，
+Firefox则是Gecko, 
+IE系列的是Trident内核，
+Opera使用Presto内核。
+最新的Opera也开始使用webkit内核了。
+
+伪元素选择器：
+伪元素以"::"开头，用在选择器后，用于选择指定的元素。
+::after				IE8部分支持，IE9以后完整支持
+::before			IE8部分支持，IE9以后完整支持
+::first-letter		IE6部分支持，IE9以后完整支持
+::first-line		IE6部分支持，IE9以后完整支持
+::selection			IE9开始支持
+::backdrop			仅Chrome与opera支持
+
+伪类以":"开头，用在选择器后，用于指明元素在某种特殊的状态下才能被选中
+表示子元素的
+:only-child 
+:first-child 
+:last-child 
+:nth-child(n) 、:nth-last-child(n) 
+n可以为元素的序号，也可以为特殊的字符，比如“odd”，“even
+:first-of-type、:last-of-type	、
+:nth-of-type(n)、:nth-last-of-type(n)
+ n可以为元素的序号，也可以为特殊的字符，比如“odd”，“even
+:only-child 			IE7部分支持，IE9以后完整支持
+:first-child 			IE7开始支持
+:last-child  			IE7部分支持，IE9以后完整支持
+:nth-child(n)			IE7部分支持，IE9以后完整支持
+:nth-last-child(n)		IE7部分支持，IE9以后完整支持
+:first-of-type 			IE7部分支持，IE9以后完整支持
+:last-of-type 			IE7部分支持，IE9以后完整支持
+:nth-of-type(n) 		IE7部分支持，IE9以后完整支持
+:nth-last-of-type(n) 	IE7部分支持，IE9以后完整支持

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>xuanzhuan</title>
+	<style>
+		body{
+			margin: 0 auto;
+			text-align: center;
+		}
+		button{
+			margin: 100px;
+		}
+		.xz{
+			margin: 100px;
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			position: relative;
+		}
+		button:hover+.xz{
+			animation-name: mymove;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;	
+		}
+		@keyframes mymove{
+			from{left: 0px;}
+			to{left: 400px;}
+			0%{transform:rotate(0deg);}
+			25%{transform:rotate(90deg);}
+			50%{transform:rotate(180deg);}
+			75%{transform:rotate(270deg);}
+			100%{transform:rotate(360deg);}
+		}
+	</style>
+</head>
+<body>
+		<div>
+			<button>旋转</button>
+			<div class="xz"></div>
+		</div>
+</body>
+</html>

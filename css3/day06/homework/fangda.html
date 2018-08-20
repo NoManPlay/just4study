@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>xuanzhuan</title>
+	<style>
+		body{
+			margin: 0 auto;
+			text-align: center;
+		}
+		button{
+			margin: 100px;
+		}
+		.fd{
+			margin: 100px;
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			position: relative;
+		}
+		button:hover+.fd{
+			animation-name: mymove;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;	
+		}
+		@keyframes mymove{
+			from{left: 0px;}
+			to{left: 400px;}
+			0%{transform:scale(1,1);}
+			25%{transform:scale(1.5,1.5);}
+			50%{transform:scale(2,2);}
+			75%{transform:scale(2.5,2.5);}
+			100%{transform:scale(3,3);}
+		}
+	</style>
+</head>
+<body>
+		<div>
+			<button>旋转</button>
+			<div class="fd"></div>
+		</div>
+</body>
+</html>
