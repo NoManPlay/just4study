@@ -1,0 +1,238 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+/*首页*/
+.leftDiv{
+	background-color: #282830;
+	padding: 0px;
+}
+
+.rightDiv{
+	background-color: #eeeeee;
+	padding: 0px;
+}
+
+.leftDiv_top{
+	height: 38px;
+	width: 100%;
+	background-color: #3d556d;
+}
+
+.leftDiv_top img{
+	width: 23px;
+	height: 30px;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+.leftDiv_top div{
+	display: inline-block;
+}
+
+.leftDiv_top span{
+	color: #ffffff;
+	height: 38px;
+	display: inline-block;
+	line-height: 38px;
+	margin-left: 30px;
+}
+
+/*leftDiv_bottom*/
+.leftDiv_bottom{
+	list-style: none;
+	margin-top: 40px;
+}
+.leftDiv_bottom li{
+	height: 40px;
+	border-bottom: 1px solid #cccccc;
+	line-height: 40px;
+	padding-left: 20px;
+}
+.leftDiv_bottom li a{
+	color: #ffffff;
+}
+.leftDiv_bottom li span{
+	display: inline-block;
+	width: 90px;
+	margin-left: 5px;
+}
+
+/*rightDiv_top*/
+.rightDiv_top div{
+	height: 38px;
+}
+.rightDiv_top{
+	background-color: #ffffff;
+	height: 38px;
+}
+.rightDivTop_left{
+	padding: 0px;
+}
+
+.rightDivTop_left i{
+	margin-left: 20px;
+	display: inline-block;
+	margin-top: 5px;
+	width: 30px;
+	height: 30px;
+	font-size: 20px;
+}
+.rightDivTop_left span{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-color: red;
+	color: #ffffff;
+	text-align: center;
+	border-radius: 50%;
+	position: relative;
+	left: -25px;
+	top: -10px;
+	font-size: 10px;
+}
+.rightDivTop_right{
+	padding: 0px;
+	line-height: 38px;
+}
+.rightDivTop_right div{
+	display: inline-block;
+}
+.rightDivTop_right img{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+/*shouye content*/
+.content_top{
+	widows: 100%;
+	height: 250px;
+	padding: 20px;
+}
+
+.content_top div{
+	height: 100%;
+}
+
+div.one,div.two,div.three{
+	height: 55px;
+	background-color: #ffffff;
+	margin-top: 10px;
+}
+
+div.cicleDiv{
+	width: 40px;
+	height: 40px;
+	background-color: #63ba12;
+	border-radius: 50%;
+	display: inline-block;
+	margin-top: 5px;
+	margin-left: 10px;
+	text-align: center;
+}
+div.cicleDiv i{
+	width: 30px;
+	height: 30px;
+	color: #ffffff;
+	font-size: 24px;
+}
+
+div.one span,div.two span,div.three span{
+	font-size: 24px;
+	font-weight: 500;
+	margin-left: 10px;
+}
+
+div.cicleDiv1{
+	background-color: #7b2fc0;
+}
+div.cicleDiv2{
+	background-color: #3bb8ec;
+}
+div.contentTop_center div.zhexian{
+	background-color: #ffffff;
+	margin-top: 10px;
+	height: 185px;
+}
+
+div.contentRight_top,div.contentRight_bottom{
+	height: 85px;
+	background-color: #ffffff;
+}
+div.contentRight_bottom{
+	margin-top: 15px;
+}
+
+div.contentRight_top{
+	margin-top: 10px;
+}
+
+/*栏目内容区*/
+.lanmuContent{
+	width: 97%;
+	background-color: #ffffff;
+	margin-top: 10px;
+	margin-left: 10px;
+	border: 1px solid #ffffff;
+}
+
+div.btns{
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+button{
+	margin-left: 10px;
+}
+.lanmuContent table th,.lanmuContent table td{
+	text-align: center;
+}
+
+
+/*zixun.html*/
+.zixunContent{
+	width: 97%;
+	background-color: #ffffff;
+	margin-top: 10px;
+	margin-left: 10px;
+	border: 1px solid #ffffff;
+}
+
+/*user.html*/
+.userContent{
+	width: 97%;
+	background-color: #ffffff;
+	margin-top: 10px;
+	margin-left: 10px;
+	border: 1px solid #ffffff;
+}
+
+.cards{
+	width: 100%;
+}
+.card{
+	width: 225px;
+	height: 260px;
+	border: 1px solid rgba(237,237,237,1);
+	float: left;
+	margin: 10px 25px 10px 50px;
+}
+.card div{
+	width: 100%;
+	text-align:center;
+	margin-top: 10px;
+}
+.card  div img{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	
+}
+.card ul{
+	display: inline-block;
+	margin-top: 20px;
+	margin-left: 20px;
+}

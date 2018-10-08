@@ -1,0 +1,128 @@
+<div class="userContent">
+	<div class="btns">
+		<button class="btn btn-success add">新增</button>
+	</div>
+	<div class="cards">
+		<div class="hidden">
+			<div><img src="images/chart1.png"></div>
+			<ul class="list-unstyled">
+				<li>用户名</li>
+				<li>真实姓名</li>
+				<li>手机号</li>
+				<li>email</li>
+				<li>状态</li>
+			</ul>
+			<ul class="list-unstyled">
+				<li>vicky</li>
+				<li>乔美丽</li>
+				<li>18812344321</li>
+				<li>qiaoli@briup.cn</li>
+				<li>&&&</li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- 模态框 -->
+	<div class="modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="mytitle">添加用户</span>
+					<span class="close myClose">&times;</span>
+				</div>
+				<div class="modal-body">
+					<form action="#">
+						<span class="hiddenId"></span>
+						<span>用户名：</span>
+						<input type="text" class="userName">
+						<span>密码：</span>
+						<input type="password" class="psw">
+						<span>重复密码：</span>
+						<input type="password" class="psw2">
+						<span>真实姓名：</span>
+						<input type="text" class="name">
+						<span>手机号：</span>
+						<input type="number" class="phone">
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-default myClose">取消</button>
+					<button class="btn btn-danger submit">确认</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+	$(function(){
+		//用户内容区高度
+		$('.userContent').height($('.rightDiv').height()-100);
+	});
+
+	//请求所有用户信息
+	$.get('http://120.78.164.247:8099/manager/user/findAllUser',function(results){
+		var users=results.data;
+		console.log(users);
+		users.forEach(function(item){
+			var cloneCard=$('.hidden').clone();
+			cloneCard.attr('class','card');
+
+			//设置内容
+			var img=$(cloneCard.children().children()[0]);
+			if(item.userface){
+				img.attr('src',item.userface);
+			}
+			$(cloneCard.children().children()[6]).text(item.username);
+			$(cloneCard.children().children()[7]).text(item.nickname);
+			$(cloneCard.children().children()[9]).text(item.email);
+			
+
+
+			$('.cards').append(cloneCard);
+		});
+	});
+	//添加
+	$('.add').click(function(){
+		$('.mytitle').text('添加用户');
+
+		$('.userName').val('');
+		$('.psw').val('');
+		$('.psw2').val('');
+		$('.name').val('');
+		$('.hiddenId').text('');
+		$('.modal').modal('show');
+		
+	});
+	//确认
+	$('.submit').click(function(){
+		var username=$('.userName').val();
+		var psw=$('.psw').val();
+		var psw2=$('.psw2').val();
+		var nickname=$('.name').val();
+		var hiddenId=$('.hiddenId').text();
+		if(psw==psw2){
+			var o={
+				username: username, 
+				password: psw,
+				nickname: nickname,
+				id: hiddenId
+			}
+		}else{
+			alert('两次密码不同');
+		}
+
+		$.post('http://120.78.164.247:8099/manager/user/saveOrUpdateUser',o,function(result){
+			if(result.status==200){
+				$(".modal").modal("hide");	
+				$(".rightDiv_content").load('pages/user.html');
+			}
+		});
+	});
+
+	//取消
+	$(".myClose").click(function(){
+		$(".modal").modal("hide");
+	});
+</script>
