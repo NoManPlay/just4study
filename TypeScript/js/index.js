@@ -1,22 +1,18 @@
+"use strict";
 /*
  * @Author: qtx
  * @Date: 2019-08-27 13:57:10
  * @LastEditors: qtx
  * @LastEditTime: 2019-08-28 15:10:27
- * @Description: 
+ * @Description:
  */
-
 /**
  * demo01
  */
 console.log('hello world');
-
 function getData() {
-
 }
-
-var str: string = "hello world";
-
+var str = "hello world";
 /**
  * vscode   配置自动编译
  *
@@ -24,8 +20,6 @@ var str: string = "hello world";
  *
  * step2    run task tsconfig.json
  */
-
-
 /**
  * demo02
  *
@@ -53,8 +47,6 @@ var str: string = "hello world";
 // a = (() => {
 //     throw new Error('error');
 // })()
-
-
 /**
  * demo03
  * 函数
@@ -65,7 +57,6 @@ var str: string = "hello world";
  *
  * ts↓
  */
-
 //声明法
 /*
 function run(): string {
@@ -85,7 +76,6 @@ function getInfo(name: string, age: number): string {
 }
 console.log(getInfo('tom', 20));
  */
-
 /*
 var getInfo = function (name: string, age: number): string {
     return '123';
@@ -110,11 +100,9 @@ function getInfo(name: string, age?: number): string {
 console.log(getInfo('1'));
 */
 //age:number=20为默认可选参数
-
 //注意：可选参数必须配置在最后面！！！
 //注意：可选参数必须配置在最后面！！！
 //注意：可选参数必须配置在最后面！！！
-
 //剩余参数
 /*
 function sum(a: number, ...result: number[]): number {
@@ -125,11 +113,9 @@ function sum(a: number, ...result: number[]): number {
     return sum;
 }
 */
-
 //ts函数重载
 //为兼容es5,es6与java有区别
 //es5中同名方法下面会替换上面
-
 /*
 example1
 
@@ -155,25 +141,18 @@ function getInfo(name: any, age?: any): any {
     }
 }
  */
-
 //箭头函数 es6
-
 //this 指向问题 指向上下文
-
 // setTimeout(() => {}, 1000);
-
-
 /**
  * demo5
  * 类
  */
 // class Person {
 //     name: string;//属性,省略public
-
 //     constructor(n: string) {
 //         this.name = n;
 //     }
-
 //     getName(): string {
 //         return this.name;
 //     }
@@ -181,17 +160,13 @@ function getInfo(name: any, age?: any): any {
 //         this.name = name;
 //     }
 // }
-
 // var p = new Person('123');
 // console.log(p.getName());
 // p.setName('321');
 // console.log(p.getName());
-
 //ts继承
-
 // class Person {
 //     name: string;
-
 //     constructor(name: string) {
 //         this.name = name;
 //     }
@@ -199,7 +174,6 @@ function getInfo(name: any, age?: any): any {
 //         return `${this.name}+777`;
 //     }
 // }
-
 // class Web extends Person {
 //     constructor(name: string) {
 //         super(name);
@@ -210,7 +184,6 @@ function getInfo(name: any, age?: any): any {
 // }
 // var w = new Web('123');
 // w.work();
-
 /**
  * 修饰符
  * public:      公有        类中，子类中，类外都可以访问
@@ -219,7 +192,6 @@ function getInfo(name: any, age?: any): any {
  *
  * 如果不加修饰符，default--public
  */
-
 //多态属于继承
 /*
 class Animal {
